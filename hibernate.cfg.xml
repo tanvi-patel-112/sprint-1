@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+
+<session-factory>
+<!-- Database connection settings -->
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/Online_Food</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">security123</property>
+		
+		<!-- Automatically create or update database schema -->
+		<property name="hbm2ddl.auto">create</property>
+		
+		<!-- Specify the dialect for your database -->
+	 <property name="dialect">org.hibernate.dialect.MySQL8Dialect  </property>  
+			
+		<!-- Enable or disable showing SQL statements in the console -->
+		<property name="show_sql">false</property>
+		<property name="format_sql">false</property>
+		
+        <mapping class="com.demo.Online_Food_System.Entity.User"/>
+		<mapping class="com.demo.Online_Food_System.Entity.Restaurant"/>
+		<mapping class="com.demo.Online_Food_System.Entity.MenuItem"/>
+		<mapping class="com.demo.Online_Food_System.Entity.Order"/>
+		<mapping class="com.demo.Online_Food_System.Entity.OrderItem"/>
+		<mapping class="com.demo.Online_Food_System.Entity.Payment"/>
+		
+		
+</session-factory>
+
+</hibernate-configuration>
